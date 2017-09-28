@@ -5,7 +5,7 @@ android {
     buildToolsVersion "26.0.2"
     defaultConfig {
         applicationId "io.jeti.libterminal"
-        minSdkVersion 15
+        minSdkVersion 17
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
@@ -21,4 +21,5 @@ android {
 
 dependencies {
     testImplementation 'junit:junit:4.12'
+    compile project(path: ':terminal')
 }

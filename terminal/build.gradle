@@ -6,7 +6,7 @@ android {
 
 
     defaultConfig {
-        minSdkVersion 15
+        minSdkVersion 17
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
@@ -26,7 +26,7 @@ android {
 
 dependencies {
 
-    // compile 'io.jeti.'
+    compile 'io.jeti:layoutparams:1.0.0'
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation('com.android.support.test.espresso:espresso-core:3.0.1', {
@@ -36,7 +36,7 @@ dependencies {
 
 ext {
 
-    bintrayRepo = 'android'
+    bintrayRepo = 'io'
     bintrayName = 'terminal'
 
     publishedGroupId = 'io.jeti'
@@ -50,11 +50,11 @@ ext {
 
     libraryVersion = '1.0.0'
 
-    developerId = 'mholzel'
+    developerId = 'jeti'
     developerName = 'Matthew Holzel'
     developerEmail = 'matthew.holzel@gmail.com'
 
-    organization = 'mholzel'
+    organization = 'jeti'
 
     licenseName = 'The Apache Software License, Version 2.0'  //Example for license
     licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
