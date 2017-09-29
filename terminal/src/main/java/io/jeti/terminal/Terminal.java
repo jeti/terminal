@@ -10,9 +10,9 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
-import io.jeti.ui.layoutparams.MatchMatch;
-import io.jeti.ui.layoutparams.MatchWrap0;
-import io.jeti.ui.layoutparams.MatchZero1;
+import io.jeti.layoutparams.MatchMatch;
+import io.jeti.layoutparams.MatchWrap0;
+import io.jeti.layoutparams.MatchZero1;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -65,7 +65,9 @@ public class Terminal extends LinearLayout {
 
                 InputMethodManager imm = (InputMethodManager) context
                         .getSystemService(Context.INPUT_METHOD_SERVICE);
-                imm.hideSoftInputFromWindow(editText.getWindowToken(), 0);
+                if (imm != null){
+                    imm.hideSoftInputFromWindow(editText.getWindowToken(), 0);
+                }
 
                 /*
                  * Get the command from the editText, add the command to the
