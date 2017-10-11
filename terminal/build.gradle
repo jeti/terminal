@@ -48,7 +48,7 @@ ext {
     siteUrl = 'https://github.com/jeti/terminal'
     gitUrl = 'https://github.com/jeti/terminal.git'
 
-    libraryVersion = '1.0.1'
+    libraryVersion = '1.0.2'
 
     developerId = 'jeti'
     developerName = 'Matthew Holzel'

@@ -27,6 +27,7 @@ public class Terminal extends LinearLayout {
     private EditText        editText   = null;
     private ScrollView      scrollView = null;
     public static final int BLUE       = Color.rgb(0, 124, 253);
+    public static final int GREEN      = Color.rgb(0, 253, 124);
 
     public Terminal(final Context context) {
         this(context, View.generateViewId());
@@ -65,7 +66,7 @@ public class Terminal extends LinearLayout {
 
                 InputMethodManager imm = (InputMethodManager) context
                         .getSystemService(Context.INPUT_METHOD_SERVICE);
-                if (imm != null){
+                if (imm != null) {
                     imm.hideSoftInputFromWindow(editText.getWindowToken(), 0);
                 }
 
@@ -146,6 +147,9 @@ public class Terminal extends LinearLayout {
      * before being added to the layout.
      */
     public void styleEditText(EditText editText) {
+        editText.setTypeface(Typeface.MONOSPACE);
+        editText.setTextColor(GREEN);
+        editText.setBackgroundColor(Color.BLACK);
     }
 
     /**
